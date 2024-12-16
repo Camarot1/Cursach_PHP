@@ -1,0 +1,40 @@
+.main__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  margin: 40px 0 40px 0;
+}
+
+.main__title {
+  font-size: 55px;
+}
+
+.main__login {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+.main__login input {
+  font-size: 35px;
+}
+.main__login .button__check {
+  border: 1px solid black;
+  padding: 25px 85px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.submit {
+  margin-top: 25px;
+  border: 1px solid black;
+  padding: 10px 25px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}

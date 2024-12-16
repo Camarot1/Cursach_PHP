@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+li {
+    list-style-type: none;
+}
+
+button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.padding-left {
+    padding-left: 150px;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto; 
+}
+
+.main__content {
+    display: flex;
+    gap: 100px;
+    padding-top: 80px;
+}
+.img-fix{
+    height: 360px;
+}
+.text__title {
+    font-size: 46px;
+    padding-bottom: 54px;
+}
+
+.text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text__button {
+    margin-top: 80px;
+    align-self: center;
+}
+
+.text-button {
+    padding: 29px 120px 29px 120px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-radius: 40px;
+}
+
+.fourth {
+    margin-bottom: 30px;
+}
+.font500{
+    font-weight: 500;
+}
+@media (max-width:1423px) and (min-width:768px) {
+    .img .img-fix {
+        width: 315px;
+    }
+
+    .first,
+    .third {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .second,
+    .fourth {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .padding-left {
+        padding-left: 0;
+    }
+
+    .block__text {
+        text-align: center;
+    }
+
+    .fourth {
+        margin-bottom: 50px;
+    }
+
+    .main__content {
+        gap: 50px;
+    }
+    .padding-left{
+        padding-left:0 ;
+    }
+}
+
+@media (max-width:767px) {
+    .padding-left{
+        padding-left:0 ;
+    }
+    .img {
+        width: 300px;
+    }
+
+    .text__title {
+        font-size: 36px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .main__content {
+        gap: 25px;
+    }
+
+    .first,
+    .third {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .second,
+    .fourth {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .padding-left {
+        padding-left: 0px;
+    }
+
+    .block__text {
+        text-align: center;
+    }
+
+    .text-button {
+        padding: 19px 60px 19px 60px;
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        border-radius: 40px;
+    }
+}
+.hidden{
+    display: none;
+}

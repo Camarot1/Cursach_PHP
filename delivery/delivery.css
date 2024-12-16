@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.padding-left {
+    padding-left: 150px;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.height {
+    font-size: 15;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.main__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    gap: 20px;
+}
+
+.padding__left {
+    padding-left: 125px;
+}
+
+.height {
+    height: 20px;
+}
+
+.main__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0;
+
+}
+
+.main__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.main__form {
+    background: #c6c4c4;
+    margin-bottom: 30px;
+    padding: 20px 40px;
+}
+
+.img {
+    width: 75px;
+    height: 75px;
+}
+
+.main__basket {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.basket__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0E68C;
+    gap: 10px;
+    padding: 10px;
+}
+
+.item__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+}
+.main__button{
+    border: solid 1px black;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.font700{
+    font-weight: 700;
+}
+.bucket__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 15px;
+    gap: 10px;
+}
+@media (max-width:768px) {
+    .item__money{
+        font-size: 13px;
+    }
+    .text__description{
+        font-size: 13px;
+    }
+}
