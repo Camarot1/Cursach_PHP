@@ -26,3 +26,7 @@ function Complete() {
     }
     console.log(object)
 }
+let clear = document.querySelector(".delete-button")
+clear.addEventListener("click", ()=>{
+    localStorage.clear();
+})

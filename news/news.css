@@ -35,6 +35,12 @@ a {
     display: flex;
     align-items: center;
     margin: 69px 0 80px 0;
+    flex-direction: column;
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 .right__title{
     font-size: 46px;
@@ -52,6 +58,14 @@ a {
 }
 .font500{
     font-weight: 500;
+}
+.news__extra{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+.watch__title{
+    margin-bottom: 30px;
 }
 @media (max-width:1423px) and (min-width:768px){
     .main__container{
@@ -107,4 +121,9 @@ a {
         text-align: center;
     }
     
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

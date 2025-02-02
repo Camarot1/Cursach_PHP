@@ -3,11 +3,16 @@ session_start();
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connect.php');
 $name = $_POST['name'];
 $street = $_POST['street'];
-$homeAdress = $_POST['home-adress'];
+$homeAdress = $_POST['homeadress'];
 $none = $_POST['none'];
 $phone = $_POST['phone'];
 $promo = $_POST['promo'];
+$usermail = "<usermail@mail.ru>";
+$subject = "У вас заказ";
+$text = "Заказ на имя " . $name . "Адрес " . $homeAdress;
+$email = "gorechoff@mail.ru";
 $post = mysqli_query($link, "INSERT INTO delivery (name, street, homeAdress,none,phone,promo) VALUES ('$name','$street','$homeAdress','$none','$phone','$promo' )");
+mail($usermail, $subject, $text, $email);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +26,7 @@ $post = mysqli_query($link, "INSERT INTO delivery (name, street, homeAdress,none
 </head>
 
 <body>
-<header class="header">
+    <header class="header">
         <div class="header__container container">
             <div class="header__logo">
                 <a href="/index.html">
@@ -29,7 +34,7 @@ $post = mysqli_query($link, "INSERT INTO delivery (name, street, homeAdress,none
                 </a>
             </div>
             <ul class="header__list">
-                <li class="elem"><a href="/news/news.html" class="font500">Наш блог</a></li>
+                <li class="elem"><a href="/news/news.php" class="font500">Наш блог</a></li>
                 <li class="elem"><a href="/catalog/catalog_main.php" class="font500">Каталог</a></li>
                 <li class="elem"><a href="/delivery/delivery.php" class="font500">Доставка курьером</a></li>
             </ul>
@@ -55,26 +60,56 @@ $post = mysqli_query($link, "INSERT INTO delivery (name, street, homeAdress,none
                     </script>
                 </div>
             </div>
-            <p class="main__title font700">Форма доставки</p>
+            <p class="main__title font700">Оставить заявку</p>
             <form action="delivery.php" name="form" method="post" enctype="multipart/form-data" class="main__form">
-                <input type="text" placeholder="Ваше имя..." name="name" class="name height" required>
-                <input type="text" placeholder="Улица..." name="street" class="street height" required>
-                <input type="text" placeholder="Дом..." name="homeadress" class="home-adress height" required>
-                <input type="text" placeholder="Подъезд (если есть)..." name="none" class="none height">
-                <input type="tel" placeholder="Номер телефона..." name="phone" class="phone height" required>
-                <input type="text" placeholder="Промокод ( если есть)..." name="promo" class="promo height">
-                <input type="submit" value="Заказать" onclick="Complete();">
+                <div>
+                    <p class="height">Ваше имя</p>
+                    <input type="text" placeholder="Ваше имя..." name="name" class="name height" required>
+                </div>
+                <div>
+                    <p class="height">Улица</p>
+                    <input type="text" placeholder="Улица..." name="street" class="street height" required>
+                </div>
+                <div>
+                    <p class="height">Дом</p>
+                    <input type="text" placeholder="Дом..." name="homeadress" class="home-adress height" required>
+                </div>
+                <div>
+                    <p class="height">Подъезд (если есть)</p>
+                    <input type="text" placeholder="Подъезд (если есть)..." name="none" class="none height">
+                </div>
+                <div>
+                    <p class="height">Номер телефона</p>
+                    <input type="tel" placeholder="Номер телефона..." name="phone" class="phone height" required>
+                </div>
+                <div>
+                    <p class="height">Промокод ( если есть)</p>
+                    <input type="text" placeholder="Промокод ( если есть)..." name="promo" class="promo height">
+                </div>
+                <div>
+                    <input class="form__button" type="submit" value="Заказать" onclick="Complete();">
+                </div>
             </form>
+    
+        <div class="busket__block">
             <p class="main__title font700">Ваша корзина</p>
             <div class="bucket__item bucket__item1">
-                <p class="takee"></p>
+                <div class="takee"></div>
                 <script>
                     let take = localStorage.getItem("post")
                     document.querySelector(".takee").innerHTML += take
                 </script>
             </div>
             <a href="/error/error.html"><button class="main__button">Добавить</button></a>
+            <button class="main__button delete-button">Очистить</button>
         </div>
+        </div>
+        <!-- <div class="extra hidden"></div>
+            <script> let takee = document.querySelectorAll(".takee")
+                let arr = []
+                let result = arr.push(takee)
+                console.log(arr)
+            </script> -->
     </main>
     <footer class="footer">
         <div class="footer__container container padding-left">

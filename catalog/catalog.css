@@ -135,7 +135,7 @@ a {
     display: flex;
     position: fixed;
     z-index: 9;
-    bottom: -21vh;
+    bottom:-23%;
     left: 50%;
     background-color: #FAFFC1;
     width: 50vw;
@@ -162,9 +162,6 @@ a {
     padding-left: 30px;
 }
 
-.open-menu__description {
-    max-width: 50%;
-}
 
 .open-menu__right {
     display: flex;
@@ -173,9 +170,6 @@ a {
     gap: 20px;
 }
 
-.open-menu__compound {
-    max-width: 350px;
-}
 
 .open-menu__button {
     color: white;
@@ -308,7 +302,7 @@ a {
         max-width: 130px;
         height: 150px;
         margin: 0;
-        padding-left: 20vw;
+
     }
 
     .open-menu__left {

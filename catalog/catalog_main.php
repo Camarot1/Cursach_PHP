@@ -27,7 +27,7 @@ $promotions = mysqli_query($link, "SELECT * FROM promotions");
                 </a>
             </div>
             <ul class="header__list">
-                <li class="elem"><a href="/news/news.html" class="font500">Наш блог</a></li>
+                <li class="elem"><a href="/news/news.php" class="font500">Наш блог</a></li>
                 <li class="elem"><a href="/catalog/catalog_main.php" class="font500">Каталог</a></li>
                 <li class="elem"><a href="/delivery/delivery.php" class="font500">Доставка курьером</a></li>
             </ul>
@@ -85,16 +85,6 @@ $promotions = mysqli_query($link, "SELECT * FROM promotions");
                 } ?>
             </div>
         </div>
-        <!-- <script>
-            let retu = 0
-            let button = document.querySelectorAll(".card__button")
-            button.forEach(function (event) {
-                event.addEventListener("click", () => {
-                    retu = event.value
-                    return retu
-                })
-            })
-        </script> -->
         <div class="card__open-menu hidden">
             <?php
             echo "
@@ -110,6 +100,16 @@ $promotions = mysqli_query($link, "SELECT * FROM promotions");
                 </div> " ?>
         </div>
     </main>
+    <footer class="footer">
+        <div class="footer__container container padding-left">
+            <p class="footer__title white">ГОРЯЧЁФФ</p>
+            <div class="footer__logo">
+                <a href="https://vk.com/club225188291"><img src="/img/logo2.svg" alt=""></a>
+                <a href="https://ok.ru/group/70000005612038"><img src="/img/logo3.svg" alt=""></a>
+            </div>
+            <p class="footer__avt white">© 2023 авторская пиццерия "ГОРЯЧЁФФ"</p>
+        </div>
+    </footer>
 </body>
 
 </html>

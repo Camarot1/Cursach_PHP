@@ -14,6 +14,12 @@ button {
     border: none;
 }
 
+.takee {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 a {
     text-decoration: none;
 }
@@ -36,7 +42,12 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 40%;
+    align-items: center;
     gap: 20px;
+    background-color: #F0E68C;
+    border: 1px solid #F0E68C;
+    margin-bottom: 30px;
+    padding: 20px 40px;
 }
 
 .padding__left {
@@ -60,11 +71,6 @@ a {
     font-size: 30px;
 }
 
-.main__form {
-    background: #c6c4c4;
-    margin-bottom: 30px;
-    padding: 20px 40px;
-}
 
 .img {
     width: 75px;
@@ -93,21 +99,29 @@ a {
     align-items: center;
     gap: 21px;
 }
-.main__button{
+
+.main__button {
     border: solid 1px black;
     padding: 10px 20px;
     cursor: pointer;
 }
-.font700{
+
+.font700 {
     font-weight: 700;
 }
-.bucket__item{
+
+.bucket__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
-.card{
+
+.form__button {
+    border: 1p solid black;
+}
+
+.card {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -116,11 +130,17 @@ a {
     padding: 10px 15px;
     gap: 10px;
 }
+
 @media (max-width:768px) {
-    .item__money{
+    .item__money {
         font-size: 13px;
     }
-    .text__description{
+
+    .text__description {
         font-size: 13px;
     }
+}
+
+.hidder {
+    display: none;
 }

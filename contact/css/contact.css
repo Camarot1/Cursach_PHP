@@ -1,0 +1,25 @@
+.der {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20vw;
+  gap: 50px;
+  margin-top: 10vh;
+  margin-bottom: 40px;
+}
+.main__container * {
+  font-size: 25px;
+}
+.main__container .main__title {
+  font-size: 35px;
+}
+.main__container .main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
